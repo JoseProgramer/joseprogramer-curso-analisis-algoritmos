@@ -17,7 +17,16 @@ def es_bisiesto(anio: int) -> bool:
         True si el año es bisiesto, False en caso contrario.
     """
     # TODO: implemente la lógica usando if / elif / else.
- 
+
+    if anio % 400 == 0:
+        return True
+    elif anio % 100 == 0:
+        return False
+    elif anio % 4 == 0:
+        return True
+    else:
+        return False
+        
  
 def leer_anios() -> list[int]:
     """Solicita al usuario una lista de años separados por comas.
