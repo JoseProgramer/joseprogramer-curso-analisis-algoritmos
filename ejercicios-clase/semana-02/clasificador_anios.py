@@ -53,7 +53,10 @@ def main() -> None:
     # TODO: use leer_anios(), filtre los años bisiestos con una
     # comprensión de listas, e imprima un resumen que incluya al menos
     # la lista de años bisiestos y cuántos hay.
- 
+    anios = leer_anios()
+    bisiestos = [anio for anio in anios if es_bisiesto(anio)]
+    print(f"Años bisiestos: {bisiestos}")
+    print(f"Cantidad de años bisiestos: {len(bisiestos)}")
  
 if __name__ == "__main__":
     main()
