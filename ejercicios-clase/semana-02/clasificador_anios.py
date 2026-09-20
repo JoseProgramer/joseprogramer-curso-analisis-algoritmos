@@ -29,6 +29,14 @@ def leer_anios() -> list[int]:
         Lista de años como enteros.
     """
     # TODO: implemente la lectura y validación.
+
+    while True:
+        entrada = input("Ingrese una lista de años separados por comas: ")
+        try:
+            anios = [int(anio.strip()) for anio in entrada.split(",")]
+            return anios
+        except ValueError:
+            print("Entrada inválida. Por favor, ingrese solo números enteros separados por comas.")
  
  
 def main() -> None:
